@@ -14,6 +14,6 @@ describe("Verificar contraseña", () => {
     expect(verificarContrasena("Alejandra")).toEqual("Valido");
   });
   it("No deberia tener una mayuscula", () => {
-    expect(verificarContrasena("alejandra")).toEqual("La contraseña debe al menos una letra mayuscula");
+    expect(verificarContrasena("alejandra")).toEqual("La contraseña debe tener al menos una letra mayuscula");
   });
 });

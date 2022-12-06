@@ -9,10 +9,13 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const usuario = user.value;
-  const password = pass.value;
+  var password = pass.value;
   var verificacion = verificarContrasena(password);
-  if(verificacion = "Valido"){
+  if(verificacion == "Valido"){
     div.innerHTML = "<p>" + "usuario creado" + "</p>";
+  }
+  else{
+    div.innerHTML = "<p>" + verificacion + "</p>";
   }
 
   
