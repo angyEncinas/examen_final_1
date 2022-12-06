@@ -1,12 +1,18 @@
 function verificarContrasena(password) {
   var resultado = " ";
   var tamaño = password.length;
-  if(tamaño > 8){
-    resultado = "Valido";
+  if(password == " " || password == ""){
+    resultado = "La contraseña no debe ser nula";
   }
   else{
-    resultado = "La contraseña debe tener mas de 8 caracteres";
+    if(tamaño > 8){
+      resultado = "Valido";
+    }
+    else{
+      resultado = "La contraseña debe tener mas de 8 caracteres";
+    }
   }
+  
   return resultado;
 }
 
