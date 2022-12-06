@@ -1,15 +1,19 @@
-import sumar from "./sumador";
+import verificarContrasena from "./login";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
+const user = document.querySelector("#usuario");
+const pass = document.querySelector("#password");
+const form = document.querySelector("#login-form");
 const div = document.querySelector("#resultado-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
+  const usuario = user.value;
+  const password = pass.value;
+  var verificacion = verificarContrasena(password);
+  if(verificacion = "Valido"){
+    div.innerHTML = "<p>" + "usuario creado" + "</p>";
+  }
 
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  
 });
